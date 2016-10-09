@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bitacora</title>
+	<link rel="shortcut icon" href="img/icon.ico">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -12,9 +13,10 @@
 <body>
 	<header>
 		<div class="container-fluid">
-			<div class="row text-center">
+			<div class="row text-center" id="saludo-usuario">
 				<h1>Bienvenida!!</h1>
-				<p class="bienevenida-nombre">Jaz-Mine</p>
+				<input class="btn btn-default" type="button" value="Input">
+				<p>Jaz-mine</p>
 			</div>
 		</div>
 	</header>
@@ -30,8 +32,13 @@
 				</select>
 			</div>
 		</div>
+		<div id="contenedor-post"></div>
 	</section>
 	
-	<script type="text/javascript" src="js/app.js"></script> 
+	<script type="text/javascript" src="js/utilities.js"></script> 
+	<script type="text/javascript" src="js/post.js"></script>
+	<script type="text/javascript" src="js/formulario.js"></script>  
+	<script type="text/javascript" src="js/main.js"></script> 
+
 </body>
 </html>
