@@ -1,14 +1,13 @@
 function Form(contenedorForm){
-	contenedorForm.innerHTML = "";
 	this.imprimirForm = function(){
 		var inputTitulo = document.createElement("input");
-			inputTitulo.classList.add("form-control");
+			inputTitulo.classList.add("form-control","center-block");
 			inputTitulo.setAttribute("type", "text");
 			inputTitulo.setAttribute("placeholder", "Titulo");
 			inputTitulo.setAttribute("id","text-titulo");
 			contenedorForm.appendChild(inputTitulo)
 		var textArea = document.createElement("textarea");
-			textArea.classList.add("form-control");
+			textArea.classList.add("form-control","center-block");
 			textArea.setAttribute("rows", "3");
 			textArea.setAttribute("placeholder", "Texto");
 			textArea.setAttribute("id","text-area");
@@ -32,12 +31,16 @@ function Form(contenedorForm){
 			btnCerrar.classList.add("btn", "btn-default");
 			btnCerrar.setAttribute("type", "button");
 			btnCerrar.setAttribute("value", "Cerrar");
+			btnCerrar.setAttribute("id","texto-btn-cerrar")
 			btnCerrar.addEventListener("click", this.cerrar);
 			//textoBtnEliminar.createTextNode("Eliminar");
 			contenedorForm.appendChild(btnCerrar);
 	}
 	this.cerrar = function(){
-		contenedorForm.innerHTML = "";
+		contenedorForm.parentElement.removeChild(contenedorForm);
+		/*Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+}*/ 
 	}
 }
 
@@ -49,7 +52,7 @@ function FormCita(contenedorForm){
 	Form.call(this,contenedorForm);
 	this.imprimirForm = function(){
 		var textArea = document.createElement("textarea");
-			textArea.classList.add("form-control");
+			textArea.classList.add("form-control","center-block");
 			textArea.setAttribute("rows", "3");
 			textArea.setAttribute("placeholder", "Texto");
 			textArea.setAttribute("id","text-area");
@@ -84,16 +87,13 @@ function FormCita(contenedorForm){
 			//textoBtnEliminar.createTextNode("Eliminar");
 			contenedorForm.appendChild(btnCerrar);
 	}
-	this.cerrar = function(){
-		contenedorForm.innerHTML = "";
-	}
 }
 
 function FormMeme(contenedorForm){
 	Form.call(this,contenedorForm);
 	this.imprimirForm = function(){
 		var textArea = document.createElement("textarea");
-			textArea.classList.add("form-control");
+			textArea.classList.add("form-control","center-block");
 			textArea.setAttribute("rows", "3");
 			textArea.setAttribute("placeholder", "Texto");
 			textArea.setAttribute("id","text-area");
@@ -120,9 +120,6 @@ function FormMeme(contenedorForm){
 			btnCerrar.addEventListener("click", this.cerrar);
 			//textoBtnEliminar.createTextNode("Eliminar");
 			contenedorForm.appendChild(btnCerrar);
-	}
-	this.cerrar = function(){
-		contenedorForm.innerHTML = "";
 	}	
 }
 
@@ -130,7 +127,7 @@ function FormPastillita(contenedorForm){
 	Form.call(this,contenedorForm);
 	this.imprimirForm = function(){
 		var inputTitulo = document.createElement("input");
-			inputTitulo.classList.add("form-control");
+			inputTitulo.classList.add("form-control","center-block");
 			inputTitulo.setAttribute("type", "text");
 			inputTitulo.setAttribute("placeholder", "Titulo");
 			inputTitulo.setAttribute("id","text-titulo");
@@ -169,9 +166,6 @@ function FormPastillita(contenedorForm){
 			btnCerrar.addEventListener("click", this.cerrar);
 			//textoBtnEliminar.createTextNode("Eliminar");
 			contenedorForm.appendChild(btnCerrar);
-	}
-	this.cerrar = function(){
-		contenedorForm.innerHTML = "";
 	}
 }
 

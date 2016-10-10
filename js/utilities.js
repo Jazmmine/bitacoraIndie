@@ -8,3 +8,14 @@ function obtenerTiempoActual (){
 	var segundo = datoTiempo.getSeconds();
 	return dia + "/" + mes + "/" + anio + "(" + hora + ":"+ minuto + ":"+ segundo + ")"             
 }
+
+/*
+function limpiarHijosDeForm(formulario){
+	console.log("limpiarHijosDeForm");
+	while(formulario.hasChildNodes()){
+		formulario.removeChild(formulario.firstChild);
+	}
+	/*while (node.hasChildNodes()) {
+    node.removeChild(node.firstChild);
+
+}*/

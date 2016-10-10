@@ -1,32 +1,34 @@
 window.addEventListener("load", function(){	
 		var fila = document.getElementById("fila");
-		var contenedor = document.createElement("div");
-			contenedor.setAttribute("id", "contenedor");
-			fila.appendChild(contenedor);
-		var contenedorTask = document.getElementById("contenedor");
-
 		var selector = document.getElementById("selector");			
 		selector.addEventListener("change", function(){
+			var contenedorFormId = document.getElementById("contenedor");
+			if (contenedorFormId != null) {
+				object.cerrar();
+			}
+			var contenedorTask = document.createElement("div");
+				contenedorTask.setAttribute("id", "contenedor");
+				fila.appendChild(contenedorTask);
 			var selectorValor = selector.value;
 			console.log(selectorValor);
+			object = null;
 			switch(selectorValor){
 				case "texto":
-						var formulario = new FormTexto(contenedorTask);
-							formulario.imprimirForm();
+						object = new FormTexto(contenedorTask);					
 						break;
 				case "cita":
-						var formulario = new FormCita(contenedorTask);
-							formulario.imprimirForm();
+						object = new FormCita(contenedorTask);
 						break;
 				case "meme":
-						var formulario = new FormMeme(contenedorTask);
-							formulario.imprimirForm();
+						object = new FormMeme(contenedorTask);
 						break;
 				case "pastillita":
-						var formulario = new FormPastillita(contenedorTask);
-							formulario.imprimirForm();
+						object = new FormPastillita(contenedorTask);
+
 						break;
 			}
+			object.imprimirForm();
+
 		});
 
 });

@@ -11,17 +11,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="container-fluid">
-			<div class="row text-center" id="saludo-usuario">
-				<h1>Bienvenida!!</h1>
-				<input class="btn btn-default" type="button" value="Input">
-				<p>Jaz-mine</p>
-			</div>
-		</div>
-	</header>
 	<section>
-		<div class="container text-center form-group">
+		<div class="container form-group" id="contenedor-padre">
 			<div class="row" id="fila">
 				<select name="selector" id="selector" class="form-control">
 					<option value="opciones">Seleccionar Opcion</option>
@@ -31,8 +22,8 @@
 					<option value="pastillita">Pastillita</option>
 				</select>
 			</div>
+			<div id="contenedor-post"></div>
 		</div>
-		<div id="contenedor-post"></div>
 	</section>
 	
 	<script type="text/javascript" src="js/utilities.js"></script> 
