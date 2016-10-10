@@ -7,7 +7,7 @@ function Post(contenedor,titulo,texto,horaPub){
 		var divPublicar = document.createElement("div");
 			divPublicar.classList.add("center-block", "div-post");
 			contenedor.appendChild(divPublicar);
-			divPublicar.innerHTML = titulo + texto + horaPub;
+			divPublicar.innerHTML = "<h3>" + titulo + "</h3>" + "<p>" + texto + "</p>" + "<p>" + horaPub + "</p>";
 			console.log(divPublicar);		
 	}
 }
@@ -23,7 +23,7 @@ function PostCita(contenedor,titulo,texto,horaPub,autor){
 		var divPublicar = document.createElement("div");
 			divPublicar.classList.add("center-block", "div-post");
 			contenedor.appendChild(divPublicar);
-			divPublicar.innerHTML =  texto + autor + horaPub;
+			divPublicar.innerHTML = "<p>" + texto + "</p>" + "<p>" + autor + "</p>" + "<p>" + horaPub + "</p>";
 			console.log(divPublicar);	
 	}
 }
@@ -56,7 +56,7 @@ function PostPastillita(contenedor,titulo,texto,horaPub,color){
 			divPublicar.classList.add("center-block", "div-post");
 			divPublicar.style.backgroundColor = color;
 			contenedor.appendChild(divPublicar);
-			divPublicar.innerHTML = titulo + texto + horaPub;
+			divPublicar.innerHTML = "<h3>" + titulo + "</h3>" + "<p>" + texto + "</p>" + "<p>" + horaPub + "</p>";
 			console.log(divPublicar);		
 	}
 }

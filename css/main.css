@@ -4,7 +4,17 @@ body{
 	margin: 0;
 	padding: 0;
 }
-/*index.html*/
+/*del index.html*/
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.bienevenida-nombre {
+    color: white;
+    font-size: 40px;
+}
+
 #contenedor-padre{
 	margin-top: 10%;
     width: 65%;
@@ -14,16 +24,7 @@ body{
 #selector:hover{
     box-shadow: inset 0 0 0 25px #36465D;
 }
-.div-post{
-	border: 2px solid red;
-	height: 100px;
-	width: 100px;
-}
 
-.tamanio-img{
-	width: 50px;
-	height: 50px;
-}
 /*javascript*/
 /*formulario*/
 #contenedor{
@@ -67,6 +68,7 @@ body{
 }
 
 #texto-btn-publicar{
+	float: right;
 	background-color: #529ECC;
 	border-color: #529ECC;
 	color: white;
@@ -75,10 +77,40 @@ body{
 }
 
 #texto-btn-cerrar{
-	float: right;
 	background-color: #9DA6AF;
 	border-color: #9DA6AF;
 	color: white;
     position: relative;
     top: 5px;
+}
+/*javascript*/
+/*post*/
+#contenedor-post{
+	margin-top: 10px;
+}
+
+.div-post{
+	height: 100%;
+	width: 100%;
+	padding: 5px 10px 10px 10px;
+	margin: 10px;
+	border: 2px solid rgba(0, 0, 0, .5);
+	border-radius: 10px;
+    background-color: white;
+    text-align: center;
+
+}
+
+.div-post:hover{
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.98);
+}
+.tamanio-img{
+	width: 100%;
+	height: 100%;	
+}
+
+#input-color{
+	border: none;
 }
